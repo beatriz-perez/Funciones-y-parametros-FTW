@@ -1,11 +1,21 @@
 'use strict';
 
-function ten (word, rep) {
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+}
+let rn = getRandomNumber(10);
+
+function writeThis (word, rep) {
     for(let i = 0; i < rep; i++){
         console.log(i+1, word);
     }
 }
+// A todas el mismo número
+writeThis('Patata', rn);
+writeThis('Aguacate', rn);
+writeThis('Pizza', rn);
 
-ten('Patata', 10);
-ten('Aguacate', 7);
-ten('Pizza', 50);
+// a cada una un número distinto
+writeThis('Patata', getRandomNumber(10));
+writeThis('Aguacate', getRandomNumber(10));
+writeThis('Pizza', getRandomNumber(10));
